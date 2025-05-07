@@ -6,7 +6,7 @@
 /*   By: mfrancis <mfrancis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 18:58:34 by mfrancis          #+#    #+#             */
-/*   Updated: 2025/05/07 18:23:48 by mfrancis         ###   ########.fr       */
+/*   Updated: 2025/05/07 18:44:47 by mfrancis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 WrongCat::WrongCat() : WrongAnimal("WrongCat")
 {
-    std::cout << type <<" WrongCat Default Constructor Called" << std::endl;
+    std::cout << type <<" Default Constructor Called" << std::endl;
 }
 
 WrongCat::WrongCat(const WrongCat &other): WrongAnimal()
