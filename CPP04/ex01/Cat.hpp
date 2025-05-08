@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfrancis <mfrancis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 19:04:55 by mfrancis          #+#    #+#             */
-/*   Updated: 2025/05/08 19:25:21 by mfrancis         ###   ########.fr       */
+/*   Created: 2025/05/06 19:04:03 by mfrancis          #+#    #+#             */
+/*   Updated: 2025/05/06 21:42:04 by mfrancis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+/* ************************************************************************** */
 
-#include <iostream>
+#ifndef CAT_HPP
+#define CAT_HPP
 
-class Animal
+#include "Animal.hpp"
+
+class Cat : public Animal
 {
-    protected:
-    std::string type;
-    
     public:
-    Animal();
-    Animal(std::string type); // manter ou tiro?? 
-    Animal(const Animal &other);
-    Animal &operator=(const Animal &other);
-    virtual ~Animal();
+    Cat();
+    Cat(const Cat &other);
+    Cat &operator=(const Cat &other);
+    ~Cat();
 
-    virtual void makeSound() const;
-    std::string getType() const;
+    void makeSound() const;
 };
 
 #endif

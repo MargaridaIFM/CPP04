@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfrancis <mfrancis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 19:04:55 by mfrancis          #+#    #+#             */
-/*   Updated: 2025/05/08 19:25:21 by mfrancis         ###   ########.fr       */
+/*   Created: 2025/05/07 18:52:47 by mfrancis          #+#    #+#             */
+/*   Updated: 2025/05/07 19:14:40 by mfrancis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#include "Brain.hpp"
 
-#include <iostream>
-
-class Animal
+Brain::Brain()
 {
-    protected:
-    std::string type;
+    std::cout << "Brain Default Constructor  Called" << std::endl;
+}
+
+
+Brain::~Brain()
+{
+    std::cout << "Brain Destructor Called" << std::endl;
+}
+
+std::string getIdea(int index)  const
+{
     
-    public:
-    Animal();
-    Animal(std::string type); // manter ou tiro?? 
-    Animal(const Animal &other);
-    Animal &operator=(const Animal &other);
-    virtual ~Animal();
-
-    virtual void makeSound() const;
-    std::string getType() const;
-};
-
-#endif
+}
+void Brain::setIdea(int Index, const std::string &newIdea)
+{
+    
+}

@@ -6,7 +6,7 @@
 /*   By: mfrancis <mfrancis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 18:52:55 by mfrancis          #+#    #+#             */
-/*   Updated: 2025/05/08 19:22:18 by mfrancis         ###   ########.fr       */
+/*   Updated: 2025/05/08 19:30:17 by mfrancis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,14 @@ Animal:: Animal(): type("")
 }
 Animal::Animal(std::string type): type(type)
 {
-    std::cout <<  type << " Default Parameter Constructor Called." << std::endl;
+    std::cout <<  type << " Default Parameter Constructu\or Called." << std::endl;
 }
-Animal::Animal(const Animal &other): type(other.type)
+Animal::Animal(const Animal &other)
 {
-    std::cout <<  this->type << " Copy constructor Called." << std::endl;    
+    this->type = other.type;
+    std::cout <<  this->type << " Copy constructor Called." << std::endl;
+
+    
 }
 
 Animal& Animal::operator=(const Animal &other)
@@ -30,13 +33,13 @@ Animal& Animal::operator=(const Animal &other)
     if (this != &other) {
         this->type = other.type;
     }
-    std::cout <<  this->type << " Copy Assignment Operator called." << std::endl;
+    std::cout <<  this->type << " Copy Cssignment Operator called." << std::endl;
     return *this;
 }
 
 Animal::~Animal()
 {
-    std::cout << "Animal " << type << " Destructor Called" << std::endl;
+    std::cout << "Animal Destructor Called" << std::endl;
 }
 void Animal:: makeSound() const
 {

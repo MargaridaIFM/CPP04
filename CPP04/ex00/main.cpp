@@ -6,7 +6,7 @@
 /*   By: mfrancis <mfrancis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 19:32:55 by mfrancis          #+#    #+#             */
-/*   Updated: 2025/05/07 18:28:56 by mfrancis         ###   ########.fr       */
+/*   Updated: 2025/05/07 21:22:05 by mfrancis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,20 +35,20 @@ int main()
     delete(Dogs);
     delete(Cats);
 
-    std:: cout << "Wrong animals sounds" << std::endl;
-    
-    const WrongAnimal* WrongAnimals = new WrongAnimal();
-	const WrongAnimal* WrongCats = new WrongCat();
-
     std::cout << std::endl;
-    std::cout << WrongAnimals->getType() << "WrongAnimal: ";
-    WrongAnimals->makeSound(); 
+    std:: cout << "Wrong animals sounds" << std::endl;
+  
+    const WrongAnimal* WrongAnimal1 = new WrongAnimal();
+	const WrongAnimal* WrongAnimal2 = new WrongCat();
+
+    std::cout << WrongAnimal1->getType() << "WrongAnimal: ";
+    WrongAnimal1->makeSound(); 
     
-    std::cout << WrongCats->getType() << ":";
-    WrongCats->makeSound();
+    std::cout << WrongAnimal2->getType() << ":";
+    WrongAnimal2->makeSound();
     
-    delete(WrongAnimals);
-    delete(WrongCats);    
+    delete(WrongAnimal1);
+    delete(WrongAnimal2);    
 
     return (0);
 }
