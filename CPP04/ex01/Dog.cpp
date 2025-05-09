@@ -6,28 +6,32 @@
 /*   By: mfrancis <mfrancis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 21:43:30 by mfrancis          #+#    #+#             */
-/*   Updated: 2025/05/06 21:49:37 by mfrancis         ###   ########.fr       */
+/*   Updated: 2025/05/08 20:02:42 by mfrancis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 #include "Dog.hpp"
+#include "Brain.hpp"
 
-Dog:: Dog(): Animal("Dog")
+Dog::Dog(): Animal(), brain(new Brain())
 {
     std::cout << type <<" Default Constructor Called" << std::endl;
 }
-Dog::Dog(const Dog &other): Animal("Dog")
+Dog::Dog(const Dog &other): Animal("other")
 {
-    this->type = other.type;
+    brain = new Brain(*other.brain);
     std::cout <<  this->type << " Copy constructor Called." << std::endl;
 
 }
 
 Dog& Dog::operator=(const Dog &other)
 {
-    if (this != &other) {
-        this->type = other.type;
+    if (this != &other)
+    {
+        Animal::operator=(other);
+        delete brain;
+        brain = new Brain(*other.brain);
     }
     std::cout <<  this->type << " Copy Cssignment Operator called." << std::endl;
     return *this;
@@ -35,9 +39,15 @@ Dog& Dog::operator=(const Dog &other)
 
 Dog::~Dog()
 {
+    delete brain;
     std::cout << "Dog Destructor Called" << std::endl;
 }
 void Dog:: makeSound() const
 {
     std::cout << "Woof Woof!!" << std:: endl;
+}
+
+Brain *Dog::getBrain()
+{
+    return(this->brain);
 }

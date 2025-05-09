@@ -6,7 +6,7 @@
 /*   By: mfrancis <mfrancis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/07 18:52:47 by mfrancis          #+#    #+#             */
-/*   Updated: 2025/05/07 19:14:40 by mfrancis         ###   ########.fr       */
+/*   Updated: 2025/05/08 20:07:20 by mfrancis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Brain::Brain()
 {
-    std::cout << "Brain Default Constructor  Called" << std::endl;
+   // std::cout << "Brain Default Constructor  Called" << std::endl;
 }
 
 
@@ -23,7 +23,7 @@ Brain::~Brain()
     std::cout << "Brain Destructor Called" << std::endl;
 }
 
-std::string getIdea(int index)  const
+std::string getIdea(int index) const
 {
     
 }
