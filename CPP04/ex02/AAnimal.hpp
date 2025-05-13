@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   AAnimal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfrancis <mfrancis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/07 18:47:40 by mfrancis          #+#    #+#             */
-/*   Updated: 2025/05/07 18:52:24 by mfrancis         ###   ########.fr       */
+/*   Created: 2025/05/06 19:04:55 by mfrancis          #+#    #+#             */
+/*   Updated: 2025/05/08 19:25:21 by mfrancis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
+#ifndef AANIMAL_HPP
+#define AANIMAL_HPP
 
 #include <iostream>
 
-class Brain
+class AAnimal
 {
-    private:
-	std::string ideas[100];
-
+    protected:
+    std::string type;
+    
     public:
-	Brain();
-	~Brain();
-	Brain(const Brain &other);
-	Brain &operator=(const Brain &copy);
+    AAnimal();
+    AAnimal(std::string type); // manter ou tiro?? 
+    AAnimal(const AAnimal &other);
+    AAnimal &operator=(const AAnimal &other);
+    virtual ~AAnimal();
 
-	//std::string getIdea(int index) const;
-	//void setIdea(int index, const std::string &newIdea);
+    // Puramente virtual (Nao e inicializada)
+    virtual void makeSound() const = 0;
+    std::string getType() const;
 };
 
 #endif

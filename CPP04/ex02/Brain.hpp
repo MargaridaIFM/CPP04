@@ -23,11 +23,11 @@ class Brain
     public:
 	Brain();
 	~Brain();
-	Brain(const Brain &other);
+	Brain(const Brain &copy);
 	Brain &operator=(const Brain &copy);
 
-	//std::string getIdea(int index) const;
-	//void setIdea(int index, const std::string &newIdea);
+	std::string getIdea(int index) const;
+	void setIdea(int index, const std::string &newIdea);
 };
 
 #endif

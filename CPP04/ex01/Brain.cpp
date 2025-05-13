@@ -17,17 +17,23 @@ Brain::Brain()
    // std::cout << "Brain Default Constructor  Called" << std::endl;
 }
 
+Brain::Brain(const Brain &other)
+{
+
+}
+
 
 Brain::~Brain()
 {
     std::cout << "Brain Destructor Called" << std::endl;
 }
+    for(int i = 0; i < 100; i++)
+        ideas[i] = ""
+// std::string Brain::getIdea(int index) const
+// {
 
-std::string getIdea(int index) const
-{
+// }
+// void Brain::setIdea(int Index, const std::string &newIdea)
+// {
     
-}
-void Brain::setIdea(int Index, const std::string &newIdea)
-{
-    
-}
+// }
