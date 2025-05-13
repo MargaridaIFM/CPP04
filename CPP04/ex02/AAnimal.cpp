@@ -18,14 +18,12 @@ AAnimal:: AAnimal(): type("")
 }
 AAnimal::AAnimal(std::string type): type(type)
 {
-    std::cout <<  type << " Default Parameter Constructu\or Called." << std::endl;
+    std::cout <<  type << " Default Parameter Constructor Called." << std::endl;
 }
 AAnimal::AAnimal(const AAnimal &other)
 {
     this->type = other.type;
     std::cout <<  this->type << " Copy constructor Called." << std::endl;
-
-    
 }
 
 AAnimal& AAnimal::operator=(const AAnimal &other)
@@ -33,7 +31,7 @@ AAnimal& AAnimal::operator=(const AAnimal &other)
     if (this != &other) {
         this->type = other.type;
     }
-    std::cout <<  this->type << " Copy Cssignment Operator called." << std::endl;
+    std::cout <<  this->type << " Copy Assignment Operator called." << std::endl;
     return *this;
 }
 

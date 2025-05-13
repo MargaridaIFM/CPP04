@@ -14,26 +14,27 @@
 
 Brain::Brain()
 {
-   // std::cout << "Brain Default Constructor  Called" << std::endl;
+     for(int i = 0; i < 100; i++)
+        ideas[i] = "I want to eat";
 }
 
 Brain::Brain(const Brain &other)
 {
-
+   *this = other;
 }
 
-
+Brain &Brain::operator=(const Brain &other)
+{
+    for(int i = 0; i < 100 ; i++)
+        this->ideas[i] = other.ideas[i];
+    return(*this);
+}
 Brain::~Brain()
 {
     std::cout << "Brain Destructor Called" << std::endl;
 }
-    for(int i = 0; i < 100; i++)
-        ideas[i] = ""
-// std::string Brain::getIdea(int index) const
-// {
 
-// }
-// void Brain::setIdea(int Index, const std::string &newIdea)
-// {
-    
-// }
+std::string Brain::getIdea(int index) const
+{
+    return(this->ideas[index]);
+}

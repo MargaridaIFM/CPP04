@@ -10,15 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Brain.hpp"
 
-Dog::Dog(): Animal(), brain(new Brain())
+Dog::Dog(): AAnimal(), brain(new Brain())
 {
     std::cout << type <<" Default Constructor Called" << std::endl;
 }
-Dog::Dog(const Dog &other): Animal("other")
+Dog::Dog(const Dog &other): AAnimal("other")
 {
     brain = new Brain(*other.brain);
     std::cout <<  this->type << " Copy constructor Called." << std::endl;
@@ -29,7 +29,7 @@ Dog& Dog::operator=(const Dog &other)
 {
     if (this != &other)
     {
-        Animal::operator=(other);
+        AAnimal::operator=(other);
         delete brain;
         brain = new Brain(*other.brain);
     }

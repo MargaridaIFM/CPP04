@@ -10,15 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Brain.hpp"
 
-Cat:: Cat(): Animal(), brain(new Brain())
+Cat:: Cat(): AAnimal(), brain(new Brain())
 {
     std::cout << type <<" Default Constructor Called" << std::endl;
 }
-Cat::Cat(const Cat &other): Animal("other")
+Cat::Cat(const Cat &other): AAnimal("other")
 {
     brain = new Brain(*other.brain);
     std::cout <<  this->type << " Copy constructor Called." << std::endl;
@@ -28,7 +28,7 @@ Cat& Cat::operator=(const Cat &other)
 {
     if (this != &other)
     {
-        Animal::operator=(other);
+        AAnimal::operator=(other);
         delete brain;
         brain = new Brain(*other.brain);
     }

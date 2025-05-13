@@ -3,7 +3,7 @@ NAME = Polymorphism
 CC = c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror -g
 
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp
+SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp Brain.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
