@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfrancis <mfrancis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 19:01:31 by mfrancis          #+#    #+#             */
-/*   Updated: 2025/05/08 19:45:26 by mfrancis         ###   ########.fr       */
+/*   Created: 2025/05/26 21:25:13 by mfrancis          #+#    #+#             */
+/*   Updated: 2025/05/26 21:28:39 by mfrancis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#include "ICharacter.hpp"
 
-#include "Animal.hpp"
+Character:: Character()
 
-class Dog : public Animal
-{  
-    public:
-    Dog();
-    Dog(const Dog &other);
-    Dog &operator=(const Dog &other);
-    ~Dog();
+Character:: Character()
+{}
 
-    void makeSound() const;
-};
+Character:: Character()
 
-#endif
+Character:: ~Character()
+

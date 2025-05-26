@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfrancis <mfrancis@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/06 19:01:31 by mfrancis          #+#    #+#             */
-/*   Updated: 2025/05/08 19:45:26 by mfrancis         ###   ########.fr       */
+/*   Created: 2025/05/26 17:57:53 by mfrancis          #+#    #+#             */
+/*   Updated: 2025/05/26 17:57:54 by mfrancis         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
-
-#include "Animal.hpp"
-
-class Dog : public Animal
-{  
-    public:
-    Dog();
-    Dog(const Dog &other);
-    Dog &operator=(const Dog &other);
-    ~Dog();
-
-    void makeSound() const;
-};
-
-#endif
+int main()
+{
+IMateriaSource* src = new MateriaSource();
+src->learnMateria(new Ice());
+src->learnMateria(new Cure());
+ICharacter* me = new Character("me");
+AMateria* tmp;
+tmp = src->createMateria("ice");
+me->equip(tmp);
+tmp = src->createMateria("cure");
+me->equip(tmp);
+ICharacter* bob = new Character("bob");
+me->use(0, *bob);
+me->use(1, *bob);
+delete bob;
+delete me;
+delete src;
+return 0;
+}
