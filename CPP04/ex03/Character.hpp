@@ -13,7 +13,6 @@
 #ifndef ICHARACTER_HPP
 #define ICHARACTER_HPP
 
-
 #include "AMateria.hpp"
 
 class ICharacter
@@ -24,7 +23,7 @@ class ICharacter
     public:
         Character();
         Character(const Character &other);
-         Character &operator=(const Character &other);
+        Character &operator=(const Character &other);
         virtual ~ICharacter();
         
         virtual std::string const & getName() const = 0;

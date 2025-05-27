@@ -50,5 +50,5 @@ void AMateria::use(ICharacter &target)
     if(this->type == "Ice")
         std::cout << "* shoots an ice bolt at " << this->type << " *" << std::endl;
     else
-        std::cout <<"* heals " << this->type << "’s wounds *" << std::endl;
+        std::cout <<"* heals " << this->type << "'s wounds *" << std::endl;
 }
