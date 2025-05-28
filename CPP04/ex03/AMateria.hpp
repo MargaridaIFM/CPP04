@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef AMTERIA_HPP
-#define AMATERA_HPP
+#ifndef AMATERIA_HPP
+#define AMATERIA_HPP
 
 #include <iostream>
 #include <string>
@@ -26,9 +26,9 @@ class AMateria
 
     public:
         AMateria();
-        AMateria(std::string const & type);
         AMateria(const AMateria &other);
         AMateria &operator=(const AMateria &other); 
+        AMateria(std::string const & type);
         virtual ~AMateria();
         
         std::string const & getType() const; //Returns the materia type

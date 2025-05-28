@@ -22,11 +22,13 @@ AMateria::AMateria(std::string const &type):type(type)
 {
     std::cout <<  type << " Default Parameter Constructer Called." << std::endl;
 }
+
 AMateria::AMateria(const AMateria &other)
 {
     this->type = other.type;
     std::cout <<  this->type << " Copy constructor Called." << std::endl;
 }
+
 AMateria &AMateria::operator=(const AMateria &other)
 {
     if (this != &other)
@@ -47,8 +49,6 @@ std::string const& AMateria::getType() const
 
 void AMateria::use(ICharacter &target)
 {
-    if(this->type == "Ice")
-        std::cout << "* shoots an ice bolt at " << this->type << " *" << std::endl;
-    else
-        std::cout <<"* heals " << this->type << "'s wounds *" << std::endl;
+    (void)target;
+    std::cout << "CREATE A FUCKING USE FUNCTION YOUR RETARD" << std::endl;
 }

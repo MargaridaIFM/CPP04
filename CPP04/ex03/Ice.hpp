@@ -1,3 +1,21 @@
-The use(ICharacter&) member function will display:
-• Ice: "* shoots an ice bolt at <name> *"
-• Cure: "* heals <name>’s wounds *"
+
+#ifndef ICE_HPP
+#define ICE_HPP
+
+#include "AMateria.hpp"
+
+class Ice: public AMateria
+{
+    private:
+        Ice(const Ice &other);
+        Ice &operator=(const Ice &other);
+
+    public:
+        Ice();
+        ~Ice();
+        AMateria* clone() const;
+        void use(ICharacter& target);
+
+};
+
+#endif
